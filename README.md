@@ -1,6 +1,6 @@
 # 奥维地图企业服务器（docker镜像）  
 # Docker Image for Ovital Map Enterprise Server  
-# [https://hub.docker.com/repository/docker/oakdb/omservice/general](https://hub.docker.com/repository/docker/oakdb/omservice/general)  
+# [hub.docker.com/r/oakdb/omservice](https://hub.docker.com/r/oakdb/omservice)  
 1.源镜像采用官方centos 6.10，软件源采用清华大学centos vault软件仓库。由于docker中的centos7存在systemd问题，启动服务会失败，难以解决，故弃用。  
 2.镜像预装mysql-server，omservice 3.3.3。  
 3.拉取命令 sudo docker pull oakdb/omservice:3.3.3   
