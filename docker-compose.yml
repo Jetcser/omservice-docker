@@ -1,0 +1,21 @@
+version: '2.0'
+services:
+  omservice:
+    image: oakdb/omservice:3.3.3
+    container_name: omservice
+    restart: always
+    volumes:
+      - /volume1/service/omservice/mysql/db:/var/lib/mysql
+      - /volume1/service/omservice/omservice.conf:/etc/etc/omservice.conf
+    ports:
+      - "1616:1616"
+    networks:
+      om-net:
+        ipv4_address: 172.8.0.2
+networks:
+  om-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.8.0.0/16
+          gateway: 172.8.0.1
