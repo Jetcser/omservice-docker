@@ -16,7 +16,7 @@ services:
     restart: always
     volumes:
       - /volume1/service/omservice/mysql/db:/var/lib/mysql # mysql数据库存放目录
-      - /volume1/service/omservice/omservice.conf:/etc/etc/omservice.conf # omservice服务配置文件
+      - /volume1/service/omservice/omservice.conf:/etc/omservice.conf # omservice服务配置文件
     ports:
       - "1616:1616" # 奥维服务器端口
     networks:
